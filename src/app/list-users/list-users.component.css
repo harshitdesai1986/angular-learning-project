@@ -1,0 +1,40 @@
+table tr td {
+    width: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+table tr td button {
+    color: white;
+    background-color: #254173;
+    padding: 7px 15px 9px 15px;
+    border-radius: 15px;
+}
+
+table {
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 10%;
+}
+
+table tr td img {
+    width: 70px;
+    height: 70px;
+}
+
+table thead tr td {
+    background-color: #254173;
+    color: white;
+}
+
+div button {
+    padding: 7px 25px 9px 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    float: right;
+    color: white;
+    background-color: #254173;
+}

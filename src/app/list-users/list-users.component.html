@@ -1,0 +1,29 @@
+<div>
+  <button>Create User</button>
+  <br />
+  <br />
+  <br />
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Avatar</td>
+      <td>View/Edit</td>
+    </tr>
+  </thead>
+  <tr *ngFor="let user of userList.data">
+    <td>{{user.id}}</td>
+    <td>{{user.first_name}}</td>
+    <td>{{user.last_name}}</td>
+    <td><img src="{{user.avatar}}" /></td>
+    <td><button>Go</button></td>
+  </tr>
+</table>
+
+<!-- <p ngFor="let user for userList.data">
+  <span style="width:100px;height: 30px; border: 1 solid black;"> {{user.first_name}}</span>
+</p> -->
