@@ -1,0 +1,25 @@
+<h1>
+  Registration
+</h1>
+<form class="container" name="registerUser">
+  <div class="form-field-container">
+    <label>User Name:</label>
+    <input [(ngModel)]="formData.email" name="email" type="text" placeholder="Enter email address">
+  </div>
+  <div class="form-field-container">
+    <label>Password:</label>
+    <input [(ngModel)]="formData.password" name="password" type="text" placeholder="Enter password">
+  </div>
+  <div class="form-field-container">
+    <label>Confirm Password:</label>
+    <input [(ngModel)]="confirmPassword" name="confirmPassword" type="text" placeholder="Match password">
+  </div>
+  <div class="form-button-container">
+    <button type="submit" (click)="createUser()" >Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+  <br />
+  <br />
+  <p>{{alertMessage}}</p>
+</form>
+<router-outlet></router-outlet>
