@@ -20,7 +20,7 @@
     <td>{{user.first_name}}</td>
     <td>{{user.last_name}}</td>
     <td><img src="{{user.avatar}}" /></td>
-    <td><button>Go</button></td>
+    <td><button type="button" (click)="editUser(user.id)">Go</button></td>
   </tr>
 </table>
 <router-outlet></router-outlet>

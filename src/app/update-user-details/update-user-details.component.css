@@ -1,0 +1,46 @@
+h1, .container {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.form-field-container {
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.form-button-container {
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+label {
+    width: 47%;
+    text-align: right;
+    padding-right: 30px;
+    top: 10px;
+    position: relative;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div button {
+    padding: 7px 25px 9px 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    float: right;
+    color: white;
+    background-color: #254173;
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}

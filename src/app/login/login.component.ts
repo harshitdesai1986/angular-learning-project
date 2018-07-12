@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserCrudOperationsService } from '../user-crud-operations.service';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',

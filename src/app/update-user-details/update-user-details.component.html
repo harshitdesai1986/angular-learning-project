@@ -1,0 +1,25 @@
+<h1>
+  Update User Details
+</h1>
+<form class="container" name="editUser">
+  <div class="form-field-container">
+    <label>User ID:</label>
+    <input class="disabled" type="text" value="{{userId}}">
+  </div>
+  <div class="form-field-container">
+    <label>Name:</label>
+    <input [(ngModel)]="formData.name" name="name" type="text" placeholder="Enter name">
+  </div>
+  <div class="form-field-container">
+    <label>Job:</label>
+    <input [(ngModel)]="formData.job" name="job" type="text" placeholder="Enter Job">
+  </div>
+  <div class="form-button-container">
+    <button type="submit" (click)="updateUser()" >Update</button>
+    <button type="button" (click)="resetDetails()" >Reset</button>
+  </div>
+  <br />
+  <br />
+  <p>{{alertMessage}}</p>
+</form>
+<router-outlet></router-outlet>

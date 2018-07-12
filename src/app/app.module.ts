@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { LoginComponent } from './login/login.component';
+import { UpdateUserDetailsComponent } from './update-user-details/update-user-details.component';
 
 const appRoutes: Routes = [
   { path: 'user-list', component: ListUsersComponent },
   { path: 'create-user', component: CreateUserComponent },
+  { path: 'update-user/:id', component: UpdateUserDetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
 ];
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     ListUsersComponent,
     CreateUserComponent,
-    LoginComponent
+    LoginComponent,
+    UpdateUserDetailsComponent
   ],
   imports: [
     BrowserModule,
