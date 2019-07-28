@@ -5,7 +5,6 @@ var app = express();
 var port = 3000;
 var Schema = mongoose.Schema;
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
