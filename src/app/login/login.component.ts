@@ -23,11 +23,15 @@ export class LoginComponent implements OnInit {
   public login() {
     if(this.formData.email !== '' && this.formData.password !== '') {
       this.userCrudOperationsService.login(this.formData)
-        .subscribe(response => {
-          if(response) {
-            this.router.navigate(['/user-list']);
-          };
-        });
+        .subscribe(
+          response => {
+            if(response) {
+              this.router.navigate(['/user-list']);
+            };
+          }, error => {
+            this.alertMessage = "Invalid credentials!";
+          }
+        );
     }
     else if(this.formData.email === '' || this.formData.password === '') {
       this.alertMessage = "User Name or Password fields must be blank";

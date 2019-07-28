@@ -18,12 +18,21 @@ export class ListUsersComponent implements OnInit {
   }
 
   public displayUsers() {
-    this.userCrudOperationsService.getUsers().subscribe(list => { this.userList = list });
+    this.userCrudOperationsService.getUsers().subscribe(list => { this.userList.data = list });
   }
 
   public editUser(id) {
     if(id !== null || id !== '') {
       this.router.navigate(['/update-user', id]);
+    }
+  }
+
+  public deleteUser(id) {
+    if(id !== null || id !== '') {
+      this.userCrudOperationsService.deleteUser(id).subscribe(response => {
+        console.log("User Deleted successfully!");
+        this.displayUsers();
+      });
     }
   }
 

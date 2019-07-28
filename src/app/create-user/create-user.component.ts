@@ -10,6 +10,8 @@ import {Router} from "@angular/router";
 export class CreateUserComponent implements OnInit {
 
   private formData: any = {
+    firstName: '',
+    lastName: '',
     email: '',
     password: ''
   };
@@ -22,7 +24,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   public createUser() {
-    if(this.formData.email !== '' && this.formData.password !== '' && this.formData.password === this.confirmPassword) {
+    if(this.formData.firstName !== '' && this.formData.lastName !== '' && this.formData.email !== '' && this.formData.password !== '' && this.formData.password === this.confirmPassword) {
       this.userCrudOperationsService.registerUser(this.formData)
         .subscribe(response => {
           if(response) {
@@ -30,8 +32,8 @@ export class CreateUserComponent implements OnInit {
           };
         });
     }
-    else if(this.formData.email === '' || this.formData.password === '') {
-      this.alertMessage = "User Name or Password fields must be blank";
+    else if(this.formData.email === '' || this.formData.password === '' || this.formData.firstName === '' || this.formData.lastName === '') {
+      this.alertMessage = "One or more fields are empty";
     }
     else if(this.formData.password !== this.confirmPassword) {
       this.alertMessage = "Password and Confirm Password are not matching";
